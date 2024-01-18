@@ -7,6 +7,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Install deps
-        run: npm ci
+        run: ci
       - name: Lint
-        run: npm run lint
+        run: run lint
