@@ -21,11 +21,12 @@ jobs:
     # Настройка MSBuild
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1
+    # Установка пакета NuGet
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.2.0
     # Сборка решения
     - name: Build the solution
       uses: microsoft/setup-msbuild@v1.3.1
     # Запуск юнит-тестов
     - name: Run unit tests
-      run: run UnitTests/UnitTests.vcxproj
-    - name: Tests report
-      run: report
+      run: dotnet test UnitTests/UnitTests.cpp --configuration Release
