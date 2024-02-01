@@ -29,4 +29,4 @@ jobs:
       uses: microsoft/setup-msbuild@v1.3.1
     # Запуск юнит-тестов
     - name: Run unit tests
-      run: dotnet test UnitTests/UnitTests.cpp --configuration Release
+      run: dotnet test x64/Release/UnitTests.dll --configuration Release
